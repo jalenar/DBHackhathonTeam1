@@ -31,10 +31,10 @@ public class ProspectiveController extends AbstractRestHandler {
             method = RequestMethod.GET,
             produces = {"application/json", "application/xml"})
     @ResponseStatus(HttpStatus.OK)
-    @ApiOperation(value = "Get a Questions list of all hotels.", notes = "The list is paginated. You can provide a page number (default 0) and a page size (default 100)")
+    @ApiOperation(value = "Get a Questions .", notes = "")
     public
     @ResponseBody
-    List<Questions> getQuestions(@ApiParam(value = "The page number (zero-based)", required = true)
+    List<Questions> getQuestions(@ApiParam(value = "", required = true)
                                     
                                       HttpServletRequest request, HttpServletResponse response) {
         return this.examService.getQuestions();
@@ -44,10 +44,10 @@ public class ProspectiveController extends AbstractRestHandler {
             method = RequestMethod.GET,
             produces = {"application/json", "application/xml"})
     @ResponseStatus(HttpStatus.OK)
-    @ApiOperation(value = "Get a Questions list of all hotels.", notes = "The list is paginated. You can provide a page number (default 0) and a page size (default 100)")
+    @ApiOperation(value = "Get a Topics list ", notes = "")
     public
     @ResponseBody
-    List<Topics> getTopics(@ApiParam(value = "The page number (zero-based)", required = true)
+    List<Topics> getTopics(@ApiParam(value = "", required = true)
                                     
                                       HttpServletRequest request, HttpServletResponse response) {
         return this.examService.getTopics();

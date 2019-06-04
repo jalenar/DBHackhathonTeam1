@@ -1,6 +1,6 @@
 package com.db.wise.test.domain;
 
-
+import java.util.List;
 
 /*
  * a simple domain entity doubling as a DTO
@@ -54,14 +54,7 @@ public class Questions {
 	}
 
 
-	public int getAnswers() {
-		return answers;
-	}
 
-
-	public void setAnswers(int answers) {
-		this.answers = answers;
-	}
 
 
 	public String getTopicId() {
@@ -80,7 +73,7 @@ public class Questions {
     String options;
 
     
-    private int answers;
+    private List<String> answers;
    
     
     private String topicId ;
@@ -88,5 +81,15 @@ public class Questions {
 
       public Questions() {
     }
+
+
+	public List<String> getAnswers() {
+		return answers;
+	}
+
+
+	public void setAnswers(List<String> answers) {
+		this.answers = answers;
+	}
 
    }
