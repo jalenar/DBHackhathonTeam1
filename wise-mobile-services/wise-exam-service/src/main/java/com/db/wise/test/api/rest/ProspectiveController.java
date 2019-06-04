@@ -5,11 +5,11 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import com.db.wise.test.domain.Questions;
-import com.db.wise.test.exception.DataFormatException;
+
 import com.db.wise.test.service.ExamService;
 
 
