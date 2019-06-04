@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.db.wise.test.domain.Questions;
+import com.db.wise.test.domain.Topics;
 
 /*
  * Sample service to demonstrate what the API would use to get things done
@@ -35,6 +36,17 @@ public class ExamService {
 		questions.add(question);
 		
 		return questions;
+	}
+
+
+
+
+	public List<Topics> getTopics() {
+		List <Topics> topics= new ArrayList<Topics>();
+		Topics topic =new Topics();
+				topic.setId(1);
+		topics.add(topic);
+		return topics;
 	}
 
    
