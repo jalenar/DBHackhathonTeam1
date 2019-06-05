@@ -16,25 +16,22 @@
     <StackLayout>
         <CardView class="card" elevation="40" radius="10" ios:shadowRadius="3">
             <StackLayout class="card-layout">
-                <Label class="h2" [text]="forumService.thread.title"></Label>
+                <Label class="h2" textWrap="true" [text]="forumService.thread.title"></Label>
                 <Label class="body" textWrap="true" [text]="forumService.thread.description"></Label>
             </StackLayout>
         </CardView>
-        <ScrollView class="page">
-                <CardView *ngFor="let item of dataItems" class="card-comment" elevation="40" radius="10" ios:shadowRadius="3">
+        <ScrollView>
+            <StackLayout>
+                <CardView *ngFor="let item of dataItems">
                     <StackLayout class="card-layout">
-                        <Label class="h2" [text]="item.user"></Label>
-                        <Label class="body" textWrap="true" [text]="item.comment"></Label>
-                        <CardView *ngFor="let item of dataItems" class="card-comment" elevation="40" radius="10"
-                            ios:shadowRadius="3" >
-                            <StackLayout class="card-layout">
-                                <Label class="h2" [text]="item.user"></Label>
-                                <Label class="body" textWrap="true" [text]="item.comment"></Label>
-                            </StackLayout>
-                        </CardView>
+                        <Label class="h2" textWrap="true" [text]="item.comment"></Label>
+                        <Label *ngFor="let itm of item.replys" textWrap="true" class="body" textWrap="true"
+                            [text]="itm.comment"></Label>
                     </StackLayout>
                 </CardView>
-            </ScrollView>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
-    <!--  -->
+
+    <comment-list [dataItems]="dataItems"></comment-list>
 </GridLayout>

@@ -4,7 +4,6 @@ import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 
 import { ThreadRoutingModule } from "./thread-routing.module";
 import { ThreadComponent } from "./thread.component";
-import { ForumService } from "../forum.service";
 
 @NgModule({
     imports: [
@@ -18,6 +17,5 @@ import { ForumService } from "../forum.service";
     schemas: [
         NO_ERRORS_SCHEMA
     ]
-    // providers:[ForumService]
 })
 export class ThreadModule { } 

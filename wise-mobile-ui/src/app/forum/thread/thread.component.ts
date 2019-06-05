@@ -29,6 +29,10 @@ export class ThreadComponent implements OnInit {
         var generic_Comment: CommentObj = new CommentObj(comment, [new CommentObj(comment, []), new CommentObj(comment, [])])
         this.dataItems.push(generic_Comment);
         this.dataItems.push(generic_Comment);
+        this.dataItems.push(generic_Comment);
+        this.dataItems.push(generic_Comment);
+        this.dataItems.push(generic_Comment);
+        this.dataItems.push(generic_Comment);
     }
 
     onDrawerButtonTap(): void {
