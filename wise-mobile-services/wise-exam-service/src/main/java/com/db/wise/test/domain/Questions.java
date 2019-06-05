@@ -10,8 +10,26 @@ public class Questions {
 
     private long id;
 
-    
     private String title;
+
+	List<String> options;
+
+	private List<String> answers;
+
+	private String topicId ;
+
+	private String type;
+
+	private int points;
+
+
+	public int getPoints() {
+		return points;
+	}
+
+	public void setPoints(int points) {
+		this.points = points;
+	}
 
     
     public long getId() {
@@ -44,19 +62,6 @@ public class Questions {
 	}
 
 
-	public String getOptions() {
-		return options;
-	}
-
-
-	public void setOptions(String options) {
-		this.options = options;
-	}
-
-
-
-
-
 	public String getTopicId() {
 		return topicId;
 	}
@@ -67,17 +72,15 @@ public class Questions {
 	}
 
 
-	private String type;
 
-    
-    String options;
+	public List<String> getOptions() {
+		return options;
+	}
 
-    
-    private List<String> answers;
-   
-    
-    private String topicId ;
-    
+	public void setOptions(List<String> options) {
+		this.options = options;
+	}
+
 
       public Questions() {
     }

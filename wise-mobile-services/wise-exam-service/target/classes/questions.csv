@@ -1,0 +1,7 @@
+id,title,topicId,type,options,answers,points
+1001,question1,tpc101,MULTIPLE,option1!option2!option3!option4,option2!option4,5
+1002,question2,tpc101,SINGLE,option1!option2!option3!option4,option1,2
+1003,question3,tpc101,BOOLEAN,true!false,false,2
+1004,question4,tpc102,MULTIPLE,option1!option2!option3!option4,option2!option3!option4,5
+1005,question5,tpc102,SINGLE,option1!option2!option3!option4,option1,2
+1006,question6,tpc102,BOOLEAN,true!false,true,2

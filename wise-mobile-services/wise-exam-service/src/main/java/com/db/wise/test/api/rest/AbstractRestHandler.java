@@ -1,5 +1,6 @@
 package com.db.wise.test.api.rest;
 
+import com.db.wise.test.domain.RestErrorInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationEventPublisher;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 
-import com.db.wise.test.domain.RestErrorInfo;
 import com.db.wise.test.exception.DataFormatException;
 import com.db.wise.test.exception.ResourceNotFoundException;
 
