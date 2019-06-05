@@ -4,6 +4,7 @@ import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angul
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { FileReaderService } from "./core/fileReader.service";
 
 @NgModule({
     bootstrap: [
@@ -16,6 +17,9 @@ import { AppComponent } from "./app.component";
     ],
     declarations: [
         AppComponent
+    ],
+    providers: [
+        FileReaderService
     ],
     schemas: [
         NO_ERRORS_SCHEMA

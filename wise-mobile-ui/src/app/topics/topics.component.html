@@ -1,0 +1,34 @@
+<ActionBar class="action-bar">
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label class="action-bar-title" text="Quiz Categories"></Label>
+</ActionBar>
+<GridLayout rows="*" backgroundColor="#250046">
+    <ScrollView row="0">
+        <StackLayout>
+            <GridLayout *ngFor="let item of categories; let i = index" rows="auto, auto, *, auto"
+                columns="*, auto" height="250" [backgroundColor]="item.backgroundColor"
+                padding="20" (tap)="navigateToQuiz(i)">
+                <Image row="0" rowSpan="3" col="1" [src]="item.image" height="150"
+                    width="150"></Image>
+                <Label row="0" col="0" colSpan="2" color="#fff" fontSize="15"
+                    [text]="'NEXT TEST - ' + item.quizDate"></Label>
+                <Label row="1" col="0" colSpan="2" color="#fff" fontSize="15"
+                    [text]="'LAST SCORE - ' + item.lastScore + '%'"></Label>
+                <Label row="3" col="0" colSpan="2" color="#fff" fontSize="30"
+                    [text]="item.title"></Label>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>
