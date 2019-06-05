@@ -1,0 +1,35 @@
+<ActionBar class="action-bar">
+    <!-- 
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!-- 
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label class="action-bar-title" text="Forum"></Label>
+</ActionBar>
+
+<GridLayout>
+    <ScrollView class="page">
+        <StackLayout>
+            <CardView *ngFor="let item of dataItems" class="card" elevation="40" radius="10" ios:shadowRadius="3"
+                (tap)="onNavItemTap('/forum/thread', item)">
+                <StackLayout class="card-layout">
+                    <Label class="h2" [text]="item.title"></Label>
+                    <Label class="body" textWrap="true" [text]="item.description"></Label>
+                    <GridLayout columns="*,*,*,*,*,*" rows="*">
+                        <Button [text]="item.upVotes" col="3" style="background-color: rgb(44, 172, 5);"></Button>
+                        <Button [text]="item.downVotes" col="4" style="background-color: rgba(204, 0, 0, 0.637);"></Button>
+                        <Button [text]="item.numberOfReplys" col="5" style="background-color: #0099CC;"></Button>
+                    </GridLayout>
+                </StackLayout>
+            </CardView>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>
