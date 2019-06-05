@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import com.db.wise.test.domain.Questions;
 import com.db.wise.test.domain.Topics;
@@ -28,8 +29,9 @@ public class ProspectiveController extends AbstractRestHandler {
 
    
     @RequestMapping(value = "Questions",
-            method = RequestMethod.GET,
-            produces = {"application/json", "application/xml"})
+            method = RequestMethod.GET)
+            //produces = {MediaType.APPLICATION_JSON_VALUE})
+
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value = "Get a Questions .", notes = "")
     public
@@ -41,8 +43,8 @@ public class ProspectiveController extends AbstractRestHandler {
     }
     
     @RequestMapping(value = "Topics",
-            method = RequestMethod.GET,
-            produces = {"application/json", "application/xml"})
+            method = RequestMethod.GET)
+            //produces = {"application/json", "application/xml"})
     @ResponseStatus(HttpStatus.OK)
     @ApiOperation(value = "Get a Topics list ", notes = "")
     public
