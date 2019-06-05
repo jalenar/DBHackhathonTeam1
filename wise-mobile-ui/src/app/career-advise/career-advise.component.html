@@ -18,14 +18,14 @@
 <GridLayout >
     <ScrollView class="page">
         <StackLayout>
-            <CardView *ngFor="let item of dataItems" class="card" elevation="40" radius="10" ios:shadowRadius="3">
+            <CardView *ngFor="let item of dataItems" class="card-comment" elevation="40" radius="10" ios:shadowRadius="3">
                 <StackLayout class="card-layout">
-                    <Label class="h2" textWrap="true" [text]="item.index + ' ' + item.topicName"></Label>
-                    <Label class="body" textWrap="true" [text]="item.topicDesc"></Label>
+                    <Label class="h2 light-text" textWrap="true" [text]="item.index + ' ' + item.topicName"></Label>
+                    <Label class="body light-text" textWrap="true" [text]="item.topicDesc"></Label>
                     <GridLayout columns="*,*,*,*,*,*" rows="*">
-                        <label class="h2" col="4" text="Sub"></label>
+                        <label class="h2 light-text" col="4" text="Sub"></label>
                         <!-- <Button [text]="3" col="4" style="background-color: rgb(44, 172, 5);"></Button> -->
-                        <Button [text]="item.topicSubscribers" col="5" style="background-color: rgba(212, 212, 212, 0.637);"></Button>
+                        <Button [text]="item.topicSubscribers" col="5" style="background-color: rgba(107, 45, 94, 0.637);" class="light-text"></Button>
                     </GridLayout>
                 </StackLayout>
             </CardView>
