@@ -7,7 +7,7 @@ import { Page } from "tns-core-modules/ui/page";
 	selector: "Score",
 	moduleId: module.id,
 	templateUrl: "./score.component.html",
-	styleUrls: ['./score.component.css']
+	styleUrls: ['./score.component.scss']
 })
 export class ScoreComponent implements OnInit {
 

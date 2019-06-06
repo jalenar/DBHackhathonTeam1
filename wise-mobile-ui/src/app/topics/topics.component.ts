@@ -10,7 +10,7 @@ import * as app from "tns-core-modules/application";
     selector: "Topics",
     moduleId: module.id,
     templateUrl: "./topics.component.html",
-    styleUrls: ['./topics.component.css']
+    styleUrls: ['./topics.component.scss']
 })
 export class TopicsComponent implements OnInit {
 

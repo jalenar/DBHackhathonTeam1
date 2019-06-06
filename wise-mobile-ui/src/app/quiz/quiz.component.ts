@@ -10,7 +10,7 @@ import { setTimeout } from "tns-core-modules/timer";
 	selector: "quiz",
 	moduleId: module.id,
 	templateUrl: "./quiz.component.html",
-	styleUrls: ['./quiz.component.css']
+	styleUrls: ['./quiz.component.scss']
 })
 export class QuizComponent implements OnInit {
 
@@ -21,6 +21,7 @@ export class QuizComponent implements OnInit {
 	currentQuestionIndex: number = 0;
 	score: number = 0;
 	clicked: boolean = false;
+	isCorrect: boolean = false;
 
 
 	constructor(
@@ -46,11 +47,13 @@ export class QuizComponent implements OnInit {
 		if (this.questions[this.currentQuestionIndex].correctAnswerIndex == answerIndex) {
 			// correct answer
 			this.score += 1;
+			this.isCorrect = true;
 			this.questions[this.currentQuestionIndex].rationale = " You are right! " + this.questions[this.currentQuestionIndex].rationale;
 			option.backgroundColor = '#B6EB81';
 		}
 		else {
 			// wrong answer
+			this.isCorrect = false;
 			this.questions[this.currentQuestionIndex].rationale = " You missed it! " + this.questions[this.currentQuestionIndex].rationale;
 			option.backgroundColor = '#ff4b60';
 		}
