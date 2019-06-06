@@ -10,8 +10,16 @@ import * as app from "tns-core-modules/application";
 
 export class CareerAdviseComponent implements OnInit {
 
-    dataItems:{index:number, topicName:string, topicDesc:string, topicSubscribers:number} [] = [
-        {  
+    dataItems:{index:number, topicName:string, topicDesc:string, topicSubscribers:number} [] = [];
+
+    constructor() {
+        // Use the component constructor to inject providers.
+    }
+
+    ngOnInit(): void {
+        // Init your component properties here.
+        
+        this.dataItems.push({  
             index:1,
             topicName:"How to budget for 4 year college",
             topicDesc:"Seniors share their experiences & views on financial planning & budgeting",
@@ -34,15 +42,7 @@ export class CareerAdviseComponent implements OnInit {
             topicName:"Placeholder Title",
             topicDesc:"Placeholder Description",
             topicSubscribers:1
-         }
-    ];
-
-    constructor() {
-        // Use the component constructor to inject providers.
-    }
-
-    ngOnInit(): void {
-        // Init your component properties here.
+         });
     }
 
     onDrawerButtonTap(): void {
