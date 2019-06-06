@@ -15,13 +15,16 @@ const routes: Routes = [
             { path: "featured", loadChildren: "~/app/featured/featured.module#FeaturedModule" },
             { path: "settings", loadChildren: "~/app/settings/settings.module#SettingsModule" },
             { path: "forum", loadChildren: "~/app/forum/forum.module#ForumModule" },
-            { path: "careerAdvise", loadChildren: "~/app/career-advise/career-advise.module#CareerAdviseModule" }
+            { path: "careerAdvise", loadChildren: "~/app/career-advise/career-advise.module#CareerAdviseModule" },
+            { path: "topics", loadChildren: "~/app/topics/topics.module#TopicsModule" },
+            { path: "quiz", loadChildren: "~/app/quiz/quiz.module#QuizModule" },
+            { path: "score", loadChildren: "~/app/score/score.module#ScoreModule" }
         ]
     }
 ];
 
 @NgModule({
-    imports: [NativeScriptRouterModule.forRoot(routes, { enableTracing: true })],
+    imports: [NativeScriptRouterModule.forRoot(routes)],
     exports: [NativeScriptRouterModule]
 })
 export class AppRoutingModule { }

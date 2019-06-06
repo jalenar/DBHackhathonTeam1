@@ -7,6 +7,7 @@ import { AppComponent } from "./app.component";
 import { LoginModule } from "./login/login.module";
 import { MainComponent } from "./maint.component";
 import { LoginComponent } from "./login/login.component";
+import { FileReaderService } from "./core/fileReader.service";
 
 @NgModule({
     bootstrap: [
@@ -21,6 +22,9 @@ import { LoginComponent } from "./login/login.component";
     declarations: [
         AppComponent,
         MainComponent
+    ],
+    providers: [
+        FileReaderService
     ],
     schemas: [
         NO_ERRORS_SCHEMA

@@ -7,8 +7,8 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
     <GridLayout tkDrawerContent rows="auto, *" class="sidedrawer sidedrawer-left">
         <StackLayout row="0" class="sidedrawer-header">
             <Label class="sidedrawer-header-image fa" text="&#xf2bd;"></Label>
-            <Label class="sidedrawer-header-brand" text="User Name"></Label>
-            <Label class="footnote" text="username@mail.com"></Label>
+            <Label class="sidedrawer-header-brand" text="Tio Rico"></Label>
+            <Label class="footnote" text="tio.rico@wise.com"></Label>
         </StackLayout>
     
         <ScrollView row="1" class="sidedrawer-content">
@@ -16,6 +16,10 @@ https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawe
                 <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/app/home')" (tap)="onNavItemTap('/app/home')">
                     <Label col="0" text="&#xf015;" class="fa"></Label>
                     <Label col="1" text="Home" class="p-r-10"></Label>
+                </GridLayout>
+                <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/app/topics')" (tap)="onNavItemTap('/app/topics')">
+                    <Label col="0" text="&#xf015;" class="fa"></Label>
+                    <Label col="1" text="Training Center" class="p-r-10"></Label>
                 </GridLayout>
 
                 <GridLayout columns="auto, *" class="sidedrawer-list-item" [class.selected]="isComponentSelected('/app/browse')" (tap)="onNavItemTap('/app/browse')">
