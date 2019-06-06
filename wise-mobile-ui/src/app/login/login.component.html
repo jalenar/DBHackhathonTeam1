@@ -1,0 +1,12 @@
+<ScrollView>
+    <StackLayout class="bottom-gradient">
+        <Image src="~/images/logo.png" width="75%" class="logo" marginTop="50"></Image>
+        <TextField hint="Email" class="input input-border input-login" (textChange)="onUserChange($event)" backgroundColor="#e7e7e7">
+        </TextField>
+        <TextField hint="Password" secure="true" class="input input-border input-login" text="{{ password }}" (textChange)="onPasswordChange($event)"
+            backgroundColor="#e7e7e7">
+        </TextField>
+        <Button text="Log In" class="btn btn-primary btn-login" (tap)="onLogin()"></Button>
+        <Button text="Sign Up" class="btn btn-primary btn-sign-up" marginBottom="20"></Button>
+    </StackLayout>
+</ScrollView>
