@@ -10,7 +10,10 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "ns"
+      "prefix": "ns",
+      "assets": [
+        "src/images"
+      ]
     }
   },
   "defaultProject": "drawer-navigation"
