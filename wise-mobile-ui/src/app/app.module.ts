@@ -4,18 +4,23 @@ import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angul
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { LoginModule } from "./login/login.module";
+import { MainComponent } from "./maint.component";
+import { LoginComponent } from "./login/login.component";
 
 @NgModule({
     bootstrap: [
-        AppComponent
+        MainComponent
     ],
     imports: [
+        LoginModule,
         AppRoutingModule,
         NativeScriptModule,
         NativeScriptUISideDrawerModule
     ],
     declarations: [
-        AppComponent
+        AppComponent,
+        MainComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA
