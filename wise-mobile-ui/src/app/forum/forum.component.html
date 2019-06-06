@@ -19,7 +19,7 @@
     <ScrollView class="page">
         <StackLayout>
             <CardView *ngFor="let item of dataItems" class="card" elevation="40" radius="10" ios:shadowRadius="3"
-                (tap)="onNavItemTap('/forum/thread', item)">
+                (tap)="onNavItemTap('/app/forum/thread', item)">
                 <StackLayout class="card-layout">
                     <Label class="h2 light-text" textWrap="true" [text]="item.title"></Label>
                     <Label class="body light-text" textWrap="true" [text]="item.description"></Label>

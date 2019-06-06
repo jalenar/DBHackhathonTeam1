@@ -28,6 +28,6 @@ export class ScoreComponent implements OnInit {
 	}
 
 	navigateToHome() {
-		this.routerExtensions.navigate(["/home"], { clearHistory: true });
+		this.routerExtensions.navigate(["/app/home"], { clearHistory: true });
 	}
 }
