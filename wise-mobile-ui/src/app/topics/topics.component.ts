@@ -56,7 +56,7 @@ export class TopicsComponent implements OnInit {
                 'questions': JSON.stringify(this.categories[index].questions)
             }
         };
-        this.routerExtensions.navigate(["/quiz"], navigationExtras);
+        this.routerExtensions.navigate(["/app/quiz"], navigationExtras);
     }
 
 

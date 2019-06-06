@@ -88,7 +88,7 @@ export class QuizComponent implements OnInit {
 				'score': Math.round(this.score * 100 / this.questions.length)
 			}
 		};
-		this.routerExtensions.navigate(["/score"], navigationExtras);
+		this.routerExtensions.navigate(["/app/score"], navigationExtras);
 	}
 
 	navigateToPrevious() {
