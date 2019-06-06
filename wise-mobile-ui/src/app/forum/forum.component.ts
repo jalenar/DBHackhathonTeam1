@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Host } from "@angular/core";
 import { RadSideDrawer } from "nativescript-ui-sidedrawer";
 import { registerElement } from 'nativescript-angular/element-registry';
 import { CardView } from 'nativescript-cardview';
@@ -7,6 +7,7 @@ import * as app from "tns-core-modules/application";
 import { RouterExtensions } from "nativescript-angular/router";
 import { Thread } from "./model/thread";
 import { ForumService } from "./forum.service";
+import { AppComponent } from "../app.component";
 
 @Component({
     selector: "Forum",
@@ -27,7 +28,7 @@ export class ForumComponent implements OnInit {
         new Thread(this.generic_Tittle, this.generic_Description, 5, 2, 3),
     ];
 
-    constructor(private routerExtensions: RouterExtensions, private forumService:ForumService) {
+    constructor(private routerExtensions: RouterExtensions, private forumService:ForumService, @Host() private parent: AppComponent) {
         // Use the component constructor to inject providers.
 
     }
@@ -38,7 +39,7 @@ export class ForumComponent implements OnInit {
     }
 
     onDrawerButtonTap(): void {
-        const sideDrawer = <RadSideDrawer>app.getRootView();
+        const sideDrawer = <RadSideDrawer>this.parent.rootDrawer.nativeElement;
         sideDrawer.showDrawer();
     }
 
@@ -51,7 +52,7 @@ export class ForumComponent implements OnInit {
             }
         });
 
-        const sideDrawer = <RadSideDrawer>app.getRootView();
+        const sideDrawer = <RadSideDrawer>this.parent.rootDrawer.nativeElement;
         sideDrawer.closeDrawer();
     }
 }
