@@ -13,7 +13,9 @@ const routes: Routes = [
             { path: "browse", loadChildren: "~/app/browse/browse.module#BrowseModule" },
             { path: "search", loadChildren: "~/app/search/search.module#SearchModule" },
             { path: "featured", loadChildren: "~/app/featured/featured.module#FeaturedModule" },
-            { path: "settings", loadChildren: "~/app/settings/settings.module#SettingsModule" }
+            { path: "settings", loadChildren: "~/app/settings/settings.module#SettingsModule" },
+            { path: "forum", loadChildren: "~/app/forum/forum.module#ForumModule" },
+            { path: "careerAdvise", loadChildren: "~/app/career-advise/career-advise.module#CareerAdviseModule" }
         ]
     }
 ];
