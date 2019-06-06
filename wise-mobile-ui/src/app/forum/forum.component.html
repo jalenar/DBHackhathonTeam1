@@ -21,12 +21,12 @@
             <CardView *ngFor="let item of dataItems" class="card" elevation="40" radius="10" ios:shadowRadius="3"
                 (tap)="onNavItemTap('/forum/thread', item)">
                 <StackLayout class="card-layout">
-                    <Label class="h2" [text]="item.title"></Label>
-                    <Label class="body" textWrap="true" [text]="item.description"></Label>
+                    <Label class="h2 light-text" textWrap="true" [text]="item.title"></Label>
+                    <Label class="body light-text" textWrap="true" [text]="item.description"></Label>
                     <GridLayout columns="*,*,*,*,*,*" rows="*">
-                        <Button [text]="item.upVotes" col="3" style="background-color: rgb(44, 172, 5);"></Button>
-                        <Button [text]="item.downVotes" col="4" style="background-color: rgba(204, 0, 0, 0.637);"></Button>
-                        <Button [text]="item.numberOfReplys" col="5" style="background-color: #0099CC;"></Button>
+                        <Button class="light-text" [text]="item.upVotes" col="3" style="background-color: rgb(44, 172, 5);"></Button>
+                        <Button class="light-text" [text]="item.downVotes" col="4" style="background-color: rgba(204, 0, 0, 0.637);"></Button>
+                        <Button class="light-text" [text]="item.numberOfReplys" col="5" style="background-color: #0099CC;"></Button>
                     </GridLayout>
                 </StackLayout>
             </CardView>
