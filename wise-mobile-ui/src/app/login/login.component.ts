@@ -5,7 +5,7 @@ import { Router } from "@angular/router";
     selector: "Login",
     moduleId: module.id,
     templateUrl: "./login.component.html",
-    styleUrls: ["./login.component.css"]
+    styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {
     public userName: string;

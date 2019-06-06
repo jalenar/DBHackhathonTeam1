@@ -1,0 +1,36 @@
+ .logo {
+    margin-bottom: 25;
+}
+
+.input-login {
+    border-radius: 5;
+    width: 90%;
+    color: black;
+    font-size: 18;
+    placeholder-color: #bbbbbb;
+    padding: 10;
+    margin: 10;
+    font-family: 'Open Sans', 'OpenSans-Regular';
+}
+
+.btn-login {
+    border-radius: 3;
+    background-color: #283e71;
+    font-size: 16;
+    width: 90%;
+    font-family: 'Open Sans', 'OpenSans-Regular';
+}
+
+.btn-sign-up {
+    border-radius: 3;
+    background-color: #4d66a2;
+    font-size: 16;
+    width: 50%;
+    margin-top: 50;
+    font-family: 'Open Sans', 'OpenSans-Regular';
+}
+
+.bottom-gradient {
+    /* background: linear-gradient(to bottom, #334c86, #4d66a2, #334c86); */
+    background: white;
+}
